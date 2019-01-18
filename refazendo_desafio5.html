@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <meta charset="utf-8"> 
+    <title>JavaScript</title> 
+  
+    <script>
+      function mudaCor(){
+      document.getElementById('campo').style.background = "yellow"
+    }
+
+    function condicaoDaCor(){
+      let valorCampo = document.getElementById('campo').value  
+      if(valorCampo.length < 3){
+      alert('Tente novamente, no minimo 3 caracteres')
+      document.getElementById('campo').style.background = "red"
+      document.getElementById('area').style.background = "red"
+
+
+      
+
+
+      
+      }
+      else{
+        document.getElementById('campo').style.background = "green"
+        alert('Atendeu os requisitos!')
+
+     }
+    }
+         
+    </script> 
+    <style>
+      #area{
+
+        border: 1px solid black;
+        width: 960px;
+        height: 500px;
+        background-color: #00FFFF;
+
+      }
+
+
+
+    </style>
+  
+  </head> 
+  
+  <body >
+  <div id="area" >
+    <h3>SIMULADOR TESTE DE VALIDAÇÃO (BASE 3 CARACTERES)</h3>
+    <input id="campo" onfocus="mudaCor()" onblur="condicaoDaCor()" type="text" >
+  </div> 
+
+  </body> 
+</html>
